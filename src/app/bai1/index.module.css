@@ -1,0 +1,24 @@
+.hover {
+  cursor: pointer;
+}
+
+.news {
+  color: #000;
+  font-size: 12px;
+  line-height: 12px;
+  font-family: PingFang SC, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+
+  width: 30.98px;
+  height: 12px;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,113 @@
+.container {
+  display: flex;
+  column-gap: 20px;
+  margin: 0 auto;
+  margin-top: 100px;
+  width: 100vw;
+  padding: 0 340px;
+}
+.horizontal {
+  border-bottom: 1px solid black;
+  padding-bottom: 20px;
+}
+
+.action {
+  display: flex;
+  column-gap: 5px;
+  margin-top: 25px;
+  font-size: 15.5px;
+  font-weight: 600;
+  opacity: 0.2;
+}
+.action svg {
+  width: 20px;
+  height: auto;
+  object-fit: cover;
+}
+
+.active {
+  opacity: 1;
+}
+.menu {
+  width: 270px;
+}
+.grid {
+  grid-template-columns: 1fr 1fr;
+}
+.title-session {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 1400px) {
+  .container {
+    padding: 0 100px;
+  }
+}
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 100px;
+    margin-top: 10px;
+    flex-direction: column;
+    width: 100%;
+  }
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+  }
+}
+@media (max-width: 768px) {
+  .horizontal {
+    border-left: 1px solid black;
+    padding-bottom: 20px;
+  }
+  .hovi {
+    display: none;
+  }
+  .container {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 0;
+  }
+  .action {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 0;
+    padding: 20px 0;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #000000a1;
+  }
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+  }
+  .cardHotGame {
+    margin-top: 30px;
+    width: 100%;
+    background: #d6b14f;
+    color: white;
+    padding-bottom: 20px;
+    border-radius: 20px;
+  }
+  .cardHotGame img {
+    border-radius: 0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  .info-card {
+    margin: 0 20px;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .title-session {
+    margin-top: 20px;
+  }
+}

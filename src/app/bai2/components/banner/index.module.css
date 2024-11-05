@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+.time {
+  display: flex;
+  column-gap: 10px;
+  background: white;
+  width: 750px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+  border-radius: 20px;
+}
+.text-time {
+  font-family: "Playfair Display", serif;
+  font-size: 60px;
+  font-weight: 600;
+}
+.title {
+  font-size: 18px;
+  color: white;
+  margin-top: 76px;
+  max-width: 560px;
+  text-align: center;
+}
+.banner-title {
+  font-family: "Playfair Display", serif;
+  font-size: 80px;
+  color: white;
+  text-align: center;
+  font-weight: 900;
+}
+.banner {
+  width: 100vw;
+  background-image: linear-gradient(
+      180deg,
+      rgba(0, 10, 255, 0.5) 0%,
+      rgba(0, 0, 0, 0) 41.57%
+    ),
+    radial-gradient(
+      27.72% 27.79% at 50.81% 68.15%,
+      #210544 0%,
+      rgba(23, 5, 68, 0.71) 50.52%,
+      rgba(23, 5, 68, 0) 100%
+    ),
+    url("/assets/rectangle3462.jpeg");
+  background-size: cover;
+  background-position: center;
+  clip-path: url(#smoothEllipseBottom);
+  height: 1000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.fixed-position {
+  position: absolute;
+  bottom: 20px;
+  height: 938px;
+  width: 938px;
+  left: -80px;
+  z-index: 999;
+}
+.custom-box {
+  height: 56px;
+  margin-top: 32px;
+  width: 560px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 10px;
+}
+.custom-box input {
+  flex: 1;
+  height: 56px;
+  outline: none;
+  border: none;
+}
+@media (max-width: 768px) {
+  .banner-title {
+    font-size: 40px;
+  }
+  .fixed-position {
+    position: unset;
+    height: 351px;
+    width: 351px;
+    margin: 0 auto;
+    margin-top: -150px;
+  }
+  .time {
+    width: 300px;
+    font-size: 20px;
+    padding: 24px;
+  }
+  .custom-box {
+    width: 90vw;
+  }
+  .text-time {
+    font-size: 36px;
+  }
+  .text-time + h2 {
+    font-size: 10px;
+  }
+}
