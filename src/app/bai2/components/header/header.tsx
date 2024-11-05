@@ -28,13 +28,18 @@ export default function Header() {
           <White_logoIcon2 className={styles.logo} />
         </div>
 
-        <nav className={`${isMenuVisible ? styles.visible : ''} ${styles.menuList}`}>
+        <nav
+          className={`${isMenuVisible ? styles.show : ""} ${styles.menuList}`}
+        >
           {MENU_ITEMS.map(({ text, isActive }) => (
-            <div key={text} className={`${styles.menuItem} ${isActive ? styles.active : ''}`}>
+            <div
+              key={text}
+              className={`${styles.menuItem} ${isActive ? styles.active : ""}`}
+            >
               {text}
             </div>
           ))}
-          <div className={styles.languageSelector}>
+          <div className={`${styles.languageSelector} ${styles.menuItem}`}>
             <Popover>
               <PopoverTrigger asChild>
                 <div>
@@ -69,7 +74,10 @@ export default function Header() {
             </Popover>
           </div>
           {isMenuVisible && (
-            <X onClick={() => setIsMenuVisible(false)} className={styles.iconClose} />
+            <X
+              onClick={() => setIsMenuVisible(false)}
+              className={styles.iconClose}
+            />
           )}
         </nav>
 

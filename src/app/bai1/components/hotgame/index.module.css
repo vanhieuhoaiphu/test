@@ -29,14 +29,6 @@
   margin-top: 30px;
 }
 
-.card {
-  background: #d6b14f;
-  color: white;
-  border-radius: 20px;
-  cursor: pointer;
-  padding-bottom: 20px;
-}
-
 .infoCard {
   display: flex;
   align-items: center;
@@ -61,6 +53,16 @@
 
 @media (max-width: 768px) {
   .container {
+    padding: 0 40px;
+  }
+  .card {
+    background: #d6b14f;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    padding-bottom: 20px;
+  }
+  .container {
     margin-top: 10px;
     flex-direction: column;
   }
@@ -71,6 +73,10 @@
   .card {
     margin-top: 30px;
     width: 100%;
+  }
+  .card img {
+    width: 60px;
+    height: 60px;
   }
   .titleSection {
     margin-top: 20px;

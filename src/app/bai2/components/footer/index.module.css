@@ -37,7 +37,7 @@
 }
 
 .logo {
-  height: 90px; /* Adjust as needed */
+  height: 90px;
   margin-bottom: 15px;
 }
 
@@ -54,9 +54,8 @@
 }
 
 .sectionTitle {
-  color: #000;
+  font-size: 24px;
   font-weight: 700;
-  margin-bottom: 20px;
 }
 
 .contactInfo {
@@ -67,11 +66,7 @@
 }
 
 .icon {
-  height: 40px; /* Adjust as needed */
-}
-
-.subscribeSection {
-  margin-top: 40px;
+  height: 40px;
 }
 
 .subscribeBox {
@@ -97,17 +92,24 @@
 }
 
 .copyRight {
-  color: #000;
-  font-size: 11.0625px;
-  line-height: 14px;
-  width: 333.47px;
+  width: 100%;
+  background: #000;
   text-align: center;
-  margin: 20px 0;
+  line-height: 14px;
+  font-size: 18px;
+  padding: 30px;
+  margin-top: 20px;
 }
 
 @media (max-width: 1200px) {
   .footerContent {
     margin: 0;
+  }
+  .logo {
+    margin-top: 40px;
+  }
+  .subscribeSection {
+    margin-top: 40px;
   }
 
   .container {

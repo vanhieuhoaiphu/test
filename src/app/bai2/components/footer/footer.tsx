@@ -10,7 +10,7 @@ import { White_logoIcon2 } from "@/components/Icons/White_logoIcon2";
 
 const Footer = () => {
   return (
-    <footer className={styles.footerBackground}>
+    <div className={styles.footerBackground}>
       <div className={styles.horizontalDivider}></div>
       <div className={styles.footerContent}>
         <div className={styles.container}>
@@ -38,7 +38,10 @@ const Footer = () => {
 
             <div className={styles.subscribeSection}>
               <h4 className={styles.sectionTitle}>Subscribe</h4>
-              <p>Subscribe to our newsletter and be the first to know about our updates</p>
+              <p>
+                Subscribe to our newsletter and be the first to know about our
+                updates
+              </p>
               <div className={styles.subscribeBox}>
                 <input type="email" placeholder="Enter your email" />
                 <ArrowRight className={styles.subscribeIcon} />
@@ -48,10 +51,8 @@ const Footer = () => {
         </div>
       </div>
       <div className={styles.horizontalDivider}></div>
-      <div className={styles.copyRight}>
-        2017 Copyright. Policy.
-      </div>
-    </footer>
+      <div className={styles.copyRight}>2017 Copyright. Policy.</div>
+    </div>
   );
 };
 

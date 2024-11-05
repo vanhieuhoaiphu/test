@@ -9,17 +9,17 @@ import Image from "next/image";
 import { useMediaQuery } from "react-responsive";
 import { ArrowRight } from "lucide-react";
 
-import styles from "./index.module.css"; // Changed to 'styles' for clarity
+import styles from "./index.module.css";
 
 export function CarouselDemo() {
   const isMobile = useMediaQuery({ query: "(max-width: 760px)" });
   return (
-    <div className={styles.carouselContainer}> {/* Renamed to 'carouselContainer' */}
+    <div className={styles.carouselContainer}>
       <Carousel>
         <CarouselContent>
           {Array.from({ length: 5 }).map((_, index) => (
             <CarouselItem key={index}>
-              <div className={styles.carouselItem}> {/* Renamed to 'carouselItem' */}
+              <div className={styles.carouselItem}>
                 <Image
                   src={
                     isMobile
@@ -35,9 +35,9 @@ export function CarouselDemo() {
                 />
 
                 {isMobile && (
-                  <div className={styles.carouselTitle}> {/* Renamed to 'carouselTitle' */}
-                    <h2>Chicky Run</h2>
-                    <div className={styles.carouselDetails}> {/* Renamed to 'carouselDetails' */}
+                  <div className={styles.carouselTitle}>
+                    <h2 style={{ fontSize: "24px" }}>Chicky Run</h2>
+                    <div className={styles.carouselDetails}>
                       <h2>Game Details</h2>
                       <ArrowRight size={"12px"} />
                     </div>
@@ -48,14 +48,14 @@ export function CarouselDemo() {
           ))}
         </CarouselContent>
       </Carousel>
-      <div className={styles.slideActions}> {/* Renamed to 'slideActions' */}
-        <div className={styles.carouselIcon}></div> {/* Renamed to 'carouselIcon' */}
-        <div className={styles.carouselIcon}></div> {/* Renamed to 'carouselIcon' */}
-        <div className={styles.circleBorder}> {/* Renamed to 'circleBorder' */}
-          <div className={styles.circle}></div> {/* Renamed to 'circle' */}
+      <div className={styles.slideActions}>
+        <div className={styles.carouselIcon}></div>
+        <div className={styles.carouselIcon}></div>
+        <div className={styles.circleBorder}>
+          <div className={styles.circle}></div>
         </div>
-        <div className={styles.carouselIcon}></div> {/* Renamed to 'carouselIcon' */}
-        <div className={styles.carouselIcon}></div> {/* Renamed to 'carouselIcon' */}
+        <div className={styles.carouselIcon}></div>
+        <div className={styles.carouselIcon}></div>
       </div>
     </div>
   );
