@@ -1,10 +1,11 @@
 "use client";
 import { MoreIcon } from "@/components/Icons/MoreIcon";
-import classes from "./index.module.css";
 import { White_logoIcon2 } from "@/components/Icons/White_logoIcon2";
 import { useState } from "react";
 import { X } from "lucide-react";
-const MenuHeader = [
+import styles from "./index.module.css";
+
+const menuItems = [
   { text: "HOME", isActive: false },
   { text: "GAMES", isActive: true },
   { text: "NEWS" },
@@ -15,36 +16,26 @@ const MenuHeader = [
 ];
 
 export default function Header() {
-  const [show, setShow] = useState<boolean>(false);
-  return (
-    <div className={classes.header}>
-      <div className={classes["header-container"]}>
-        <div>
-          <White_logoIcon2 className={classes.logo} />
-        </div>
+  const [isMenuVisible, setIsMenuVisible] = useState(false);
 
-        <div className={`${classes["menu-list"]} ${show && classes.show}`}>
-          {MenuHeader?.map((item) => (
-            <div key={item.text}>
-              <div
-                className={`${classes["menu-item"]} ${
-                  item?.isActive ? classes.active : ""
-                } `}
-              >
-                {item.text}
-              </div>
+  return (
+    <div className={styles.header}>
+      <div className={styles.headerContainer}>
+        <White_logoIcon2 className={styles.logo} />
+
+        <div className={`${styles.menuList} ${isMenuVisible ? styles.show : ''}`}>
+          {menuItems.map(item => (
+            <div key={item.text} className={`${styles.menuItem} ${item.isActive ? styles.active : ''}`}>
+              {item.text}
             </div>
           ))}
-
-          <X onClick={() => setShow(false)} className={classes["icon-close"]} />
+          <X onClick={() => setIsMenuVisible(false)} className={styles.iconClose} />
         </div>
 
-        <div className={classes["icon-right"]}>
+        <div className={styles.iconRight}>
           <MoreIcon
-            className={classes["icon-more"]}
-            onClick={() => {
-              setShow(true);
-            }}
+            className={styles.iconMore}
+            onClick={() => setIsMenuVisible(true)}
           />
         </div>
       </div>

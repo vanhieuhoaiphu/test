@@ -1,36 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
-
-.time {
+/* Utility classes for common styles */
+.flex-center {
   display: flex;
-  column-gap: 10px;
-  background: white;
-  width: 750px;
   align-items: center;
-  justify-content: space-between;
-  padding: 30px;
-  border-radius: 20px;
+  justify-content: center;
 }
-.text-time {
-  font-family: "Playfair Display", serif;
-  font-size: 60px;
-  font-weight: 600;
-}
-.title {
-  font-size: 18px;
-  color: white;
-  margin-top: 76px;
-  max-width: 560px;
-  text-align: center;
-}
-.banner-title {
-  font-family: "Playfair Display", serif;
-  font-size: 80px;
+
+.font-white-center {
   color: white;
   text-align: center;
-  font-weight: 900;
 }
+
 .banner {
   width: 100vw;
+  height: 1000px;
   background-image: linear-gradient(
       180deg,
       rgba(0, 10, 255, 0.5) 0%,
@@ -46,13 +28,65 @@
   background-size: cover;
   background-position: center;
   clip-path: url(#smoothEllipseBottom);
-  height: 1000px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
+}
+
+.bannerTitle {
+  font-size: 80px;
+  font-weight: 900;
+}
+
+.bannerTitle, .title {
+  color: white;
+  text-align: center;
+}
+
+.time {
+  background: white;
+  width: 750px;
+  padding: 30px;
+  border-radius: 20px;
+  column-gap: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.textTime {
+  font-size: 60px;
+  font-weight: 600;
+}
+
+.title {
+  font-size: 18px;
+  margin-top: 76px;
+  max-width: 560px;
+}
+
+/* Custom Input Box */
+.customBox {
+  height: 56px;
+  margin-top: 32px;
+  width: 560px;
+  padding: 10px;
+  border-radius: 10px;
+  background: white;
+  display: flex;
   align-items: center;
 }
-.fixed-position {
+
+.customBox input {
+  flex: 1;
+  height: 56px;
+  outline: none;
+  border: none;
+}
+
+/* Positioned Image */
+.fixedPosition {
   position: absolute;
   bottom: 20px;
   height: 938px;
@@ -60,45 +94,36 @@
   left: -80px;
   z-index: 999;
 }
-.custom-box {
-  height: 56px;
-  margin-top: 32px;
-  width: 560px;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  background: white;
-  padding: 10px;
-}
-.custom-box input {
-  flex: 1;
-  height: 56px;
-  outline: none;
-  border: none;
-}
+
+/* Media Queries */
 @media (max-width: 768px) {
-  .banner-title {
+  .bannerTitle {
     font-size: 40px;
   }
-  .fixed-position {
+
+  .fixedPosition {
     position: unset;
     height: 351px;
     width: 351px;
     margin: 0 auto;
     margin-top: -150px;
   }
+
   .time {
     width: 300px;
-    font-size: 20px;
     padding: 24px;
+    font-size: 20px;
   }
-  .custom-box {
+
+  .customBox {
     width: 90vw;
   }
-  .text-time {
+
+  .textTime {
     font-size: 36px;
   }
-  .text-time + h2 {
+
+  .textTime + h2 {
     font-size: 10px;
   }
 }

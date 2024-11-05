@@ -10,7 +10,7 @@
   overflow: hidden;
 }
 
-.header-container {
+.headerContainer {
   position: absolute;
   left: 0;
   top: 0;
@@ -26,15 +26,18 @@
   justify-content: space-between;
   padding: 0 340px;
 }
+
 .logo {
   width: auto;
   height: 64px;
 }
-.icon-more {
+
+.iconMore {
   height: 80px;
   cursor: pointer;
 }
-.menu-list {
+
+.menuList {
   height: 90px;
   display: flex;
   width: 50vw;
@@ -42,14 +45,16 @@
   align-items: flex-start;
   max-width: 700px;
 }
-.icon-close {
+
+.iconClose {
   position: absolute;
   right: 10px;
   top: 10px;
   cursor: pointer;
   display: none;
 }
-.menu-item {
+
+.menuItem {
   color: #ffffff80;
   cursor: pointer;
   font-size: 14.75px;
@@ -62,30 +67,45 @@
   justify-content: center;
   flex-direction: column;
 }
+
 .active {
   color: #fff;
   border-bottom: 2px solid #fff;
 }
-.more-icon {
+
+.moreIcon {
   height: 20px;
   display: none;
 }
-.icon-right {
+
+.iconRight {
   display: none;
 }
+
+.languageSelector {
+  display: block;
+  position: fixed;
+  border: none;
+  top: 10px;
+  left: 10px;
+}
+
 .show {
   display: none;
 }
+
 @media (max-width: 1400px) {
-  .header-container {
+  .headerContainer {
     padding: 0 100px;
   }
 }
+
 @media (max-width: 768px) {
-  .header-container {
+  .headerContainer {
     padding: 0 20px;
   }
-  .icon-close {
+
+  .iconClose {
     display: block;
   }
 
@@ -93,31 +113,29 @@
     height: 30px;
     width: auto;
   }
-  .icon-right {
+
+  .iconRight {
     display: block;
   }
-  .menu-list {
+
+  .menuList {
     display: none;
     padding: 30px 20px 0 20px;
     position: relative;
   }
-  .more-icon {
+
+  .moreIcon {
     display: flex;
   }
-  .menu-item {
+
+  .menuItem {
     color: #000000;
     height: 48px;
     width: 100%;
     border-bottom: 1px solid #eeeeee;
     align-items: center;
   }
-  .country {
-    display: block;
-    position: fixed;
-    border: none;
-    top: 10px;
-    left: 10px;
-  }
+
   .show {
     display: block;
     position: fixed;
@@ -127,7 +145,6 @@
     bottom: 0;
     width: 100%;
     height: 100%;
-
     color: #000000;
     background: white;
   }

@@ -1,14 +1,17 @@
-.carousel {
+.carouselItem { /* Renamed from .carousel */
   position: relative;
   width: 100%;
   height: 100%;
 }
 
-.container {
+.carouselContainer { /* Renamed from .container */
   position: relative;
+  padding: 0 260px; /* Retained original padding */
+  width: 100vw;
+  background: #03827e;
 }
 
-.carousel-title {
+.carouselTitle { /* Renamed from .carousel-title */
   position: absolute;
   bottom: 0;
   padding-bottom: 29px;
@@ -20,11 +23,11 @@
   background: #00000066;
 }
 
-.carousel-title:first-child {
+.carouselTitle:first-child {
   font-size: 24px;
 }
 
-.slide-action {
+.slideActions { /* Renamed from .slide-action */
   position: absolute;
   cursor: pointer;
   bottom: 0;
@@ -38,7 +41,7 @@
   align-items: center;
 }
 
-.icon-carousel {
+.carouselIcon { /* Renamed from .icon-carousel */
   width: 8px;
   height: 8px;
   opacity: 0.5;
@@ -46,7 +49,7 @@
   border-radius: 50%;
 }
 
-.carousel-details {
+.carouselDetails { /* Renamed from .carousel-details */
   margin-top: 21px;
   display: flex;
   column-gap: 5px;
@@ -54,21 +57,21 @@
   align-items: center;
 }
 
-.carousel-details:first-child {
+.carouselDetails:first-child {
   font-size: 13px;
 }
 
-.details-text {
+.detailsText { /* Renamed from .details-text */
   text-align: center;
   font-size: 14px;
 }
 
-.cricle-border {
+.circleBorder { /* Renamed from .cricle-border */
   border-radius: 50%;
   border: 1px solid white;
 }
 
-.cricle {
+.circle { /* Renamed from .cricle */
   width: 10px;
   height: 10px;
   margin: 4px;
@@ -76,20 +79,15 @@
   border-radius: 50%;
 }
 
-.container {
-  padding: 0 260px;
-  width: 100vw;
-  background: #03827e;
-}
-
+/* Media Queries */
 @media (max-width: 1400px) {
-  .container {
-    padding: 0 100px;
+  .carouselContainer {
+    padding: 0 100px; /* Retained original padding for smaller screens */
   }
 }
 
 @media (min-width: 768px) {
-  .carousel {
+  .carouselItem { /* Renamed from .carousel */
     mask-image: linear-gradient(
       90deg,
       rgba(0, 0, 0, 0) 0%,
@@ -102,12 +100,12 @@
 }
 
 @media (max-width: 768px) {
-  .carousel {
+  .carouselItem { /* Renamed from .carousel */
     height: 420px;
     width: 100vw;
     position: relative;
   }
-  .slide-action {
+  .slideActions { /* Renamed from .slide-action */
     position: absolute;
     bottom: 0;
     padding-bottom: 111px;
@@ -119,10 +117,10 @@
     align-items: center;
     justify-content: center;
   }
-  .container {
+  .carouselContainer { /* Renamed from .container */
     padding: 0;
   }
-  .grid-container {
+  .gridContainer { /* If this is needed, make sure to update its name in the JSX as well */
     grid-template-columns: repeat(2, 1fr);
   }
 }

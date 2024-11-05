@@ -4,8 +4,9 @@ import { CarouselDemo } from "./components/banner/banner";
 import Footer from "./components/footer/footer";
 import Header from "./components/header/header";
 import Session from "./components/session/sessions";
-import "./index.css";
 import { ArrowDown, ArrowUp } from "lucide-react";
+import { Montserrat } from "next/font/google";
+const mont = Montserrat({ subsets: ['latin'] }) 
 export default function Page() {
   const [showIcon, setShowIcon] = useState<boolean>(false);
   const [lastScrollY, setLastScrollY] = useState<number>(0);
@@ -29,7 +30,7 @@ export default function Page() {
     };
   }, [lastScrollY]);
   return (
-    <div>
+    <div style={{fontFamily: mont.style.fontFamily}}>
       <div style={{ display: "none" }} ref={ref}></div>
       <div
         style={{

@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import classes from "./index.module.css";
+import styles from "./index.module.css";
 
 import {
   Carousel,
@@ -12,15 +12,17 @@ import { VuesaxBoldPeopleIcon } from "@/components/Icons/VuesaxBoldPeopleIcon";
 import { VuesaxBoldPenTool2Icon } from "@/components/Icons/VuesaxBoldPenTool2Icon";
 import { VuesaxBoldCalendarTickIcon } from "@/components/Icons/VuesaxBoldCalendarTickIcon";
 import { MapIcon } from "@/components/Icons/MapIcon";
+import { Playfair_Display } from "next/font/google";
 
-const Card = [
+const playfair = Playfair_Display({ subsets: ['latin'] });
+
+const cards = [
   {
     title: "E-Space",
     banner: "/assets/bitmap.png",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
-
   {
     title: "The Last Game",
     banner: "/assets/bitmap2.jpeg",
@@ -88,27 +90,29 @@ const Card = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
 ];
+
 export default function Session() {
   const isMobile = useMediaQuery({ query: "(max-width: 760px)" });
 
-  const renderItem = (list: typeof Card) =>
-    list?.map((item) => (
+  const renderItems = (items: typeof cards) =>
+    items.map((item) => (
       <div
         key={item.title}
-        className={classes["grid-item"]}
+        className={styles.gridItem}
         style={{
           backgroundImage: `linear-gradient(360deg, rgba(0, 9, 225, 0.5) 6.79%, rgba(0, 0, 0, 0) 61.34%), url(${item.banner})`,
         }}
       >
-        <p className={classes["custom-font-style"]}>{item.title}</p>
+        <p className={styles.customFontStyle}>{item.title}</p>
         <p>{item.description}</p>
       </div>
     ));
+
   return (
     <div style={{ marginTop: "128px" }}>
-      <div className={classes.about}>
+      <div className={styles.about}>
         <div>
-          <h2 className={classes["about-us"]}>About Us</h2>
+          <h2 className={styles.aboutUs} style={{ fontFamily: playfair.style.fontStyle }}>About Us</h2>
           <p>
             Browse our selection of free online games and have a great time
             without leaving the site! Our Kids Games option also includes game
@@ -120,38 +124,38 @@ export default function Session() {
             on Etech.
           </p>
           <div></div>
-          <div className={classes.number}>
+          <div className={styles.userStats}>
             <div>
-              <p className={classes.text}>
+              <p className={styles.statText}>
                 600<span style={{ fontSize: "40px" }}>M</span>+
               </p>
               <p>Users</p>
             </div>
             <div>
-              <p className={classes.text}>135+</p>
+              <p className={styles.statText}>135+</p>
               <p>Games</p>
             </div>
           </div>
         </div>
-        <div className={classes["custom-background-padding"]}>
-          <div className={classes["flex-start"]}>
-            <div className={classes["bg-icon"]}>
+        <div className={styles.iconSection}>
+          <div className={styles.flexStart}>
+            <div className={styles.iconBackground}>
               <VuesaxBoldPeopleIcon style={{ width: "24px" }} />
             </div>
             <div>
               <p style={{ fontSize: "24px", fontWeight: 700 }}>24-Hour</p>
               <p>
-                24/7 access ensures operators&apos; businesses runs smoothly all
+                24/7 access ensures operators' businesses run smoothly all
                 year long.
               </p>
             </div>
           </div>
-          <div className={classes["flex-container1"]}>
-            <div className={classes["bg-icon"]}>
+          <div className={styles.flexContainer}>
+            <div className={styles.iconBackground}>
               <VuesaxBoldPenTool2Icon style={{ width: "24px" }} />
             </div>
             <div>
-              <p className={classes["custom-font-style2"]}>Design</p>
+              <p className={styles.customFontStyle}>Design</p>
               <p>
                 Combining imaginative universes, play dynamics, and
                 unprecedented gameplay, our games transcend the boundaries of
@@ -159,13 +163,12 @@ export default function Session() {
               </p>
             </div>
           </div>
-          <div className={classes["flex-container1"]}>
-            <div className={classes["bg-icon"]}>
+          <div className={styles.flexContainer}>
+            <div className={styles.iconBackground}>
               <VuesaxBoldCalendarTickIcon style={{ width: "24px" }} />
             </div>
-
             <div>
-              <p className={classes["custom-font-style2"]}>Team</p>
+              <p className={styles.customFontStyle}>Team</p>
               <p>
                 Etech is an award-winning, international studio of designers,
                 artists, animators and producers that create content for the
@@ -180,44 +183,45 @@ export default function Session() {
           src={"/assets/illustrator.png"}
           alt="banner"
           width={"400"}
-          className={`${classes["custom-auto-margin"]} ${classes["witch"]}`}
+          className={`${styles.autoMargin} ${styles.imageWitch}`}
           height={0}
         />
 
-        <MapIcon className={classes.earth} />
+        <MapIcon className={styles.earthIcon} />
       </div>
-      <div className={classes["custom-margin"]}>
-        <p className={classes["custom-text-style3"]}>Our Games</p>
+      <div className={styles.marginSection}>
+        <p className={styles.customTextStyle} style={{ fontFamily: playfair.style.fontStyle }}>Our Games</p>
         <p style={{ textAlign: "center", maxWidth: "860px", margin: "0 auto" }}>
           As a pioneer of mobile app gamification, we take pride in originality
           and individuality, providing global players with state-of-the-art
-          games that feature splendid storylines, sensational sound effects and
+          games that feature splendid storylines, sensational sound effects, and
           magnificent animation that never cease to impress.
         </p>
       </div>
-      <div className={classes.ourgame}>
-        <div>{renderItem(Card?.slice(0, 3))}</div>
-        <div style={{ marginTop: "40px" }}>{renderItem(Card?.slice(3, 6))}</div>
+      <div className={styles.gameSection}>
+        <div>{renderItems(cards.slice(0, 3))}</div>
+        <div style={{ marginTop: "40px" }}>{renderItems(cards.slice(3, 6))}</div>
         {!isMobile && (
           <>
-            <div>{renderItem(Card?.slice(6, 9))}</div>
+            <div>{renderItems(cards.slice(6, 9))}</div>
             <div style={{ marginTop: "40px" }}>
-              {renderItem(Card?.slice(9, 12))}
+              {renderItems(cards.slice(9, 12))}
             </div>
           </>
         )}
       </div>
 
       <div
-        className={classes["custom-full-width "]}
+        className={styles.fullWidthSection}
         style={{ background: "#F6F6F6" }}
       >
         <div>
           <p
-            className={classes["about-us"]}
+            className={styles.aboutUs}
             style={{
               textAlign: "center",
               marginTop: "128px",
+              fontFamily: playfair.style.fontStyle
             }}
           >
             Our Partners
@@ -237,16 +241,8 @@ export default function Session() {
               "/assets/rectangle53.png",
               "/assets/rectangle52.png",
             ].map((item, index) => (
-              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                <div className={classes["custom-flex-center"]}>
-                  <Image
-                    src={item}
-                    height={120}
-                    width={120}
-                    alt=""
-                    layout="responsive"
-                  />
-                </div>
+              <CarouselItem key={index} className={styles.carouselItem}>
+                <Image src={item} alt="" />
               </CarouselItem>
             ))}
           </CarouselContent>

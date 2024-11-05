@@ -1,6 +1,5 @@
 "use client";
 import { MoreIcon } from "@/components/Icons/MoreIcon";
-import classes from "./index.module.css";
 import { White_logoIcon2 } from "@/components/Icons/White_logoIcon2";
 import { useState } from "react";
 import { X } from "lucide-react";
@@ -10,101 +9,77 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import Image from "next/image";
-const MenuHeader = [
+import styles from "./index.module.css";
+
+const MENU_ITEMS = [
   { text: "ABOUT", isActive: false },
   { text: "GAMES", isActive: true },
-  { text: "PARTNERS" },
-  { text: "CONTACT US" },
+  { text: "PARTNERS", isActive: false },
+  { text: "CONTACT US", isActive: false },
 ];
 
 export default function Header() {
-  const [show, setShow] = useState<boolean>(false);
+  const [isMenuVisible, setIsMenuVisible] = useState<boolean>(false);
+
   return (
-    <div className={classes.header}>
-      <div className={classes["header-container"]}>
+    <header className={styles.header}>
+      <div className={styles.headerContainer}>
         <div>
-          <White_logoIcon2 className={classes.logo} />
+          <White_logoIcon2 className={styles.logo} />
         </div>
 
-        <div className={`${show && classes.show} ${classes["menu-list"]}`}>
-          {MenuHeader?.map((item) => (
-            <div key={item.text}>
-              <div
-                className={`${classes["menu-item"]} ${
-                  item?.isActive ? classes.active : ""
-                } `}
-              >
-                {item.text}
-              </div>
+        <nav className={`${isMenuVisible ? styles.visible : ''} ${styles.menuList}`}>
+          {MENU_ITEMS.map(({ text, isActive }) => (
+            <div key={text} className={`${styles.menuItem} ${isActive ? styles.active : ''}`}>
+              {text}
             </div>
           ))}
-          <div>
-            <div className={`${classes["menu-item"]} ${classes.country}`}>
-              <Popover>
-                <PopoverTrigger asChild>
-                  <div>
-                    <Image
-                      src={"/assets/78e0c9406a81fbb09f1d7a70fa3ac969.png"}
-                      alt=""
-                      width={"40"}
-                      height={"40"}
-                    />
-                  </div>
-                </PopoverTrigger>
-                <PopoverContent className="w-80">
-                  <div
-                    style={{
-                      display: "flex",
-                      columnGap: "10px",
-                      alignItems: "center",
-                      borderBottom: "1px solid #C4C4C4",
-                    }}
-                  >
-                    <Image
-                      src={"/assets/1d84c4886fb2e673f2f9443c82a6404b.png"}
-                      alt=""
-                      width={"40"}
-                      height={"40"}
-                    />
-                    <label>Vietnamese</label>
-                  </div>
-                  <div
-                    style={{
-                      display: "flex",
-                      columnGap: "10px",
-                      alignItems: "center",
-                    }}
-                  >
-                    <Image
-                      src={"/assets/78e0c9406a81fbb09f1d7a70fa3ac969.png"}
-                      alt=""
-                      width={"40"}
-                      height={"40"}
-                    />
-
-                    <label>English</label>
-                  </div>
-                </PopoverContent>
-              </Popover>
-            </div>
+          <div className={styles.languageSelector}>
+            <Popover>
+              <PopoverTrigger asChild>
+                <div>
+                  <Image
+                    src="/assets/78e0c9406a81fbb09f1d7a70fa3ac969.png"
+                    alt="Select language"
+                    width={40}
+                    height={40}
+                  />
+                </div>
+              </PopoverTrigger>
+              <PopoverContent className="w-80">
+                <div className={styles.languageOption}>
+                  <Image
+                    src="/assets/1d84c4886fb2e673f2f9443c82a6404b.png"
+                    alt="Vietnamese flag"
+                    width={40}
+                    height={40}
+                  />
+                  <label>Vietnamese</label>
+                </div>
+                <div className={styles.languageOption}>
+                  <Image
+                    src="/assets/78e0c9406a81fbb09f1d7a70fa3ac969.png"
+                    alt="English flag"
+                    width={40}
+                    height={40}
+                  />
+                  <label>English</label>
+                </div>
+              </PopoverContent>
+            </Popover>
           </div>
-          {show && (
-            <X
-              onClick={() => setShow(false)}
-              className={classes["icon-close"]}
-            />
+          {isMenuVisible && (
+            <X onClick={() => setIsMenuVisible(false)} className={styles.iconClose} />
           )}
-        </div>
+        </nav>
 
-        <div className={classes["icon-right"]}>
+        <div className={styles.iconRight}>
           <MoreIcon
-            className={classes["icon-more"]}
-            onClick={() => {
-              setShow(true);
-            }}
+            className={styles.iconMore}
+            onClick={() => setIsMenuVisible(true)}
           />
         </div>
       </div>
-    </div>
+    </header>
   );
 }
