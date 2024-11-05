@@ -1,194 +1,132 @@
-.container31 {
-  display: flex;
-  align-items: "center";
-  overflow: hidden;
-}
-
-.icon14 {
-  width: auto;
-  height: 20px;
-}
-
-.vallettaBuildingsSouthStreetVa {
-  width: 172.36px;
-  height: 32px;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.textBlock11 {
-  color: #000;
-  font-size: 11.625px;
-  line-height: 16px;
-  font-family: PingFang SC, system-ui, -apple-system, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
-}
-
-.textBlock12 {
-  margin-top: 0;
-  color: #000;
-  font-size: 11.625px;
-  line-height: 16px;
-  font-family: PingFang SC, system-ui, -apple-system, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
-}
-.heading1PGWEBMAP {
-  color: #000;
-  margin-bottom: 20px;
-  font-size: 13.2344px;
-  line-height: 14px;
-  font-weight: 600;
-  font-family: PingFang SC, system-ui, -apple-system, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
-  height: 14px;
-  justify-content: center;
-  display: flex;
-  justify-content: space-between;
-}
-
-.link7 {
-  width: 30.78px;
-  height: 12px;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.horizontalDivider {
-  margin-top: 10px;
-  max-width: 100%;
-  height: 1px;
-  max-height: 100%;
-  background-color: #0000001a;
-}
-
-.cOPYRIGHT20152024ALLRIGHTSRESE {
-  color: #000;
-  font-size: 11.0625px;
-  line-height: 14px;
-  font-family: PingFang SC, system-ui, -apple-system, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
-
-  width: 333.47px;
-  height: 14px;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.footer {
-  margin: 0 200px;
-  margin-top: 101px;
-}
-
-.flex {
-  width: 50vw;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.class1 {
-  display: grid;
-  flex: 1;
-
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-}
-.custom-transparent-box {
-  height: 56px;
-  margin-top: 32px;
-  width: 560px;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  background: transparent;
-  padding: 10px;
-  border: 1px solid white;
-}
-.custom-transparent-box input {
-  flex: 1;
-  height: 56px;
-  outline: none;
-  border: none;
-  background: transparent;
-}
-.bg-footer {
+.footerBackground {
   background-image: linear-gradient(
       0deg,
       rgba(0, 0, 0, 0.8),
       rgba(0, 0, 0, 0.8)
     ),
     linear-gradient(180deg, rgba(0, 10, 255, 0.5) 0%, rgba(0, 0, 0, 0) 136.61%),
-    /* webpackIgnore: true */ url(/assets/bG14.jpeg);
-
+    url(/assets/bG14.jpeg);
   color: white;
   background-size: auto, cover;
   background-position: center;
   background-repeat: no-repeat;
 }
-.hori {
+
+.horizontalDivider {
   background: #0000001a;
   height: 1px;
   width: 100%;
+  margin-top: 10px;
 }
-.font-700 {
+
+.footerContent {
+  margin: 0 200px;
+  margin-top: 101px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logoSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  height: 90px;
+  margin-bottom: 15px;
+}
+
+.iconContainer {
+  display: flex;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.infoSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.sectionTitle {
   font-size: 24px;
   font-weight: 700;
 }
-.icon-container {
+
+.contactInfo {
   display: flex;
+  align-items: center;
+  column-gap: 10px;
+  margin-top: 10px;
+}
+
+.icon {
+  height: 40px;
+}
+
+.subscribeBox {
+  display: flex;
+  align-items: center;
+  margin-top: 32px;
+  border: 1px solid white;
+  border-radius: 10px;
+  background: transparent;
+  padding: 10px;
+}
+
+.subscribeBox input {
+  flex: 1;
+  height: 56px;
+  outline: none;
+  border: none;
+  background: transparent;
+}
+
+.subscribeIcon {
+  color: white;
+}
+
+.copyRight {
+  width: 100%;
+  background: #000;
+  text-align: center;
+  line-height: 14px;
+  font-size: 18px;
+  padding: 30px;
   margin-top: 20px;
-  column-gap: 16px;
 }
-.icon-container svg {
-  height: 50px;
-  width: auto;
-}
-.logo-container {
-  width: 30vw;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-.icon14 {
-  width: auto;
-  height: 90px;
-}
+
 @media (max-width: 1200px) {
-  .icon11 {
-    width: auto;
-    height: 40px;
+  .footerContent {
+    margin: 0;
   }
-  .logo-container {
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+  .logo {
     margin-top: 40px;
   }
-  .icon14 {
-    width: auto;
-    height: 90px;
+  .subscribeSection {
+    margin-top: 40px;
   }
-  .footer {
-    margin: 0px;
-  }
-  .class1 {
-    grid-template-columns: 1fr;
-  }
-  .container31 {
-    display: flex;
+
+  .container {
     flex-direction: column;
-    align-items: "center";
+    align-items: center;
   }
-  .custom-transparent-box {
+
+  .subscribeBox {
     width: 90%;
   }
-  .class1 {
+
+  .infoSection {
+    grid-template-columns: 1fr;
     padding: 10px;
   }
-  .sub {
+
+  .subscribeSection {
     margin-top: 68px;
-  }
-  .listItem {
-    display: none;
   }
 }

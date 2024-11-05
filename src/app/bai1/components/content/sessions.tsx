@@ -29,6 +29,7 @@ const NavBar = [
     icon: Icon20_allgameA302cd6SvgIcon,
   },
 ];
+
 const NavBarMobile = [
   {
     text: "Home",
@@ -61,21 +62,21 @@ export default function Session() {
 
   return (
     <div>
-      <div className={classes.container}>
-        <div className={classes.menu}>
+      <div className={classes.navbarContainer}>
+        <div className={classes.navMenu}>
           {(isMobile ? NavBarMobile : NavBar)?.map((item) => (
             <div
               key={item.text}
-              className={`${classes.action} ${
-                item.isActive ? classes.active : ""
-              }  ${item.hori ? classes.horizontal : ""}`}
+              className={`${classes.navItem} ${
+                item.isActive ? classes.activeItem : ""
+              }  ${item.hori ? classes.horizontalItem : ""}`}
             >
               <item.icon />
               <label>{item.text}</label>
             </div>
           ))}
         </div>
-        <div style={{ flex: "1" }} className={classes.content}>
+        <div style={{ flex: "1" }} className={classes.mainContent}>
           <HotGame />
           <HottestCategory />
         </div>

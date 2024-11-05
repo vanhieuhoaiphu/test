@@ -4,8 +4,10 @@ import { CarouselDemo } from "./components/banner/banner";
 import Footer from "./components/footer/footer";
 import Header from "./components/header/header";
 import Session from "./components/session/sessions";
-import "./index.css";
-import { ArrowDown, ArrowUp } from "lucide-react";
+import { ChevronDown, ChevronUp } from "lucide-react";
+import { Montserrat } from "next/font/google";
+const mont = Montserrat({ subsets: ["latin"] });
+
 export default function Page() {
   const [showIcon, setShowIcon] = useState<boolean>(false);
   const [lastScrollY, setLastScrollY] = useState<number>(0);
@@ -28,8 +30,18 @@ export default function Page() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [lastScrollY]);
+
   return (
-    <div>
+    <div
+      style={{
+        fontFamily: mont.style.fontFamily,
+        position: "absolute",
+        top: 0,
+        right: 0,
+        bottom: 0,
+        left: 0,
+      }}
+    >
       <div style={{ display: "none" }} ref={ref}></div>
       <div
         style={{
@@ -43,10 +55,10 @@ export default function Page() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          zIndex: 999,
+          zIndex: 999999,
         }}
       >
-        {!showIcon ? <ArrowUp /> : <ArrowDown />}
+        {!showIcon ? <ChevronUp /> : <ChevronDown />}
       </div>
       <Header />
       <CarouselDemo />

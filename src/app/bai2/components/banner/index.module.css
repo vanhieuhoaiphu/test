@@ -1,36 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
-
-.time {
+.flex-center {
   display: flex;
-  column-gap: 10px;
-  background: white;
-  width: 750px;
   align-items: center;
-  justify-content: space-between;
-  padding: 30px;
-  border-radius: 20px;
+  justify-content: center;
 }
-.text-time {
-  font-family: "Playfair Display", serif;
-  font-size: 60px;
-  font-weight: 600;
-}
-.title {
-  font-size: 18px;
-  color: white;
-  margin-top: 76px;
-  max-width: 560px;
-  text-align: center;
-}
-.banner-title {
-  font-family: "Playfair Display", serif;
-  font-size: 80px;
+
+.font-white-center {
   color: white;
   text-align: center;
-  font-weight: 900;
 }
+
 .banner {
   width: 100vw;
+  height: 1000px;
   background-image: linear-gradient(
       180deg,
       rgba(0, 10, 255, 0.5) 0%,
@@ -46,59 +27,115 @@
   background-size: cover;
   background-position: center;
   clip-path: url(#smoothEllipseBottom);
-  height: 1000px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
-.fixed-position {
-  position: absolute;
-  bottom: 20px;
-  height: 938px;
-  width: 938px;
-  left: -80px;
-  z-index: 999;
+
+.bannerTitle {
+  font-size: 80px;
+  font-weight: 900;
 }
-.custom-box {
+
+.bannerTitle,
+.title {
+  color: white;
+  text-align: center;
+}
+
+.time {
+  background: white;
+  width: 750px;
+  padding: 30px;
+  border-radius: 20px;
+  column-gap: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.textTime {
+  font-size: 60px;
+  font-weight: 600;
+}
+
+.title {
+  font-size: 18px;
+  margin-top: 76px;
+  max-width: 560px;
+}
+
+.customBox {
   height: 56px;
   margin-top: 32px;
   width: 560px;
+  padding: 10px;
   border-radius: 10px;
+  background: white;
   display: flex;
   align-items: center;
-  background: white;
-  padding: 10px;
 }
-.custom-box input {
+
+.customBox input {
   flex: 1;
   height: 56px;
   outline: none;
   border: none;
 }
+
+.fixedPosition {
+  position: absolute;
+  bottom: 20px;
+  height: auto;
+  width: 938px;
+  left: -80px;
+  z-index: 999;
+}
+
+@media (max-width: 1400px) {
+  .fixedPosition {
+    width: 700px;
+    bottom: -150px;
+  }
+  .title {
+    max-width: 90%;
+  }
+}
+
 @media (max-width: 768px) {
-  .banner-title {
+  .bannerTitle {
     font-size: 40px;
   }
-  .fixed-position {
+  .title {
+    max-width: 90%;
+  }
+
+  .fixedPosition {
     position: unset;
     height: 351px;
     width: 351px;
     margin: 0 auto;
     margin-top: -150px;
   }
+
   .time {
-    width: 300px;
-    font-size: 20px;
+    width: 90%;
     padding: 24px;
+    font-size: 20px;
   }
-  .custom-box {
+
+  .customBox {
     width: 90vw;
   }
-  .text-time {
+
+  .textTime {
     font-size: 36px;
+    font-weight: 900;
   }
-  .text-time + h2 {
-    font-size: 10px;
+
+  .textTime + h2 {
+    font-size: 12px;
+    font-weight: 700;
   }
 }

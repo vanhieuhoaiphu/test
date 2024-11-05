@@ -1,160 +1,136 @@
-.container-footer {
-  display: flex;
-  align-items: "center";
-  overflow: hidden;
-}
-.icon-style svg {
-  width: auto;
-  height: 31px;
-}
-
-.icon12 {
-  width: auto;
-  height: 20px;
-}
-.street {
-  width: 40%;
-  display: flex;
-  flex-direction: column;
-}
-.street svg:first-child {
-  width: 53px;
-}
-.div15 {
-  width: 50vw;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-.icon-style {
-  display: flex;
-  margin-top: 20px;
-  column-gap: 16px;
-}
-
-.bg-footer {
-  background: rgba(0, 0, 0, 0.1); /* Equivalent to #0000001A */
-  height: 1px;
-  width: 100%;
-  margin-top: 76px;
-}
-.vallettaBuildingsSouthStreetVa {
-  opacity: 0.4;
-  width: 172.36px;
-  height: 32px;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.vallettaBuildingsSouthStreetVa div {
-  color: #000;
-  font-size: 11.625px;
-  line-height: 16px;
-  font-family: PingFang SC, system-ui, -apple-system, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
-}
-.headeing-footer {
-  opacity: 0.8;
-  color: #000;
-  margin-bottom: 20px;
-  font-size: 13.2344px;
-  line-height: 14px;
-  font-weight: 600;
-  font-family: PingFang SC, system-ui, -apple-system, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
-  height: 14px;
-  justify-content: center;
-  align-items: "center";
-  display: flex;
-  justify-content: space-between;
-}
-
-.item-menu-footer {
-  opacity: 0.4;
-  height: 12px;
-  padding: 10px 0;
-  font-size: 12px;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.horizontalDivider {
-  margin-top: 10px;
-  max-width: 100%;
-  height: 1px;
-  max-height: 100%;
-  background-color: #0000001a;
-}
-
-.cOPYRIGHT20152024ALLRIGHTSRESE {
-  opacity: 0.3;
-  color: #000;
-  font-size: 11.0625px;
-  line-height: 14px;
-  font-family: PingFang SC, system-ui, -apple-system, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
-
-  width: 333.47px;
-  height: 14px;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.footer {
+.footerContainer {
   margin: 0 200px;
   margin-top: 101px;
 }
 
-.flex {
-  width: 50vw;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+.footerBackground {
+  background: rgba(0, 0, 0, 0.1);
+  height: 1px;
+  width: 100%;
+  margin-top: 76px;
 }
 
-.container-item {
+.footerContent {
   flex: 1;
   display: flex;
   justify-content: space-between;
   row-gap: 10px;
   margin-bottom: 50px;
 }
-.listItem {
+
+.contactInfo {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+.contactInfo svg:first-child {
+  width: 53px;
+}
+.address {
+  opacity: 0.4;
+  width: 172.36px;
+  height: 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.address div {
+  color: #000;
+  font-size: 11.625px;
+  line-height: 16px;
+}
+
+.socialIcons {
+  display: flex;
+  margin-top: 20px;
+  column-gap: 16px;
+}
+.socialIcons svg {
+  width: auto;
+  height: 31px;
+}
+.footerHeading {
+  opacity: 0.8;
+  color: #000;
+  margin-bottom: 20px;
+  font-size: 13.2344px;
+  line-height: 14px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
   width: 100%;
 }
-.headeing-footer {
+
+.footerLinks {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.linkList {
   width: 100%;
 }
+
+.linkItem {
+  opacity: 0.4;
+  height: 12px;
+  padding: 10px 0;
+  font-size: 12px;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.linkText {
+  color: #000;
+}
+
+.divider {
+  margin-top: 10px;
+  max-width: 100%;
+  height: 1px;
+  background-color: #0000001a;
+}
+
+.copyright {
+  opacity: 0.3;
+  color: #000;
+  font-size: 11.0625px;
+  line-height: 14px;
+  margin-top: 20px;
+}
+
+.mobileAddress {
+  margin-top: -50px;
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
 @media (max-width: 768px) {
-  .footer {
+  .footerContainer {
     margin: 0px;
+    padding: 0 40px;
   }
-  .container-item {
+  .footerContent {
+    flex-direction: column;
+    row-gap: 0;
+  }
+  .footerLinks {
     flex-direction: column;
   }
-  .headeing-footer {
+  .footerHeading {
     cursor: pointer;
-  }
-  .headeing-footer {
     border-bottom: 1px solid #e5e7eb;
     padding: 30px 0;
     margin-bottom: 0;
   }
-  .horizontalDivider {
+  .divider {
     display: none;
   }
-  .container-footer {
-    display: flex;
-    flex-direction: column;
-    align-items: "center";
-  }
-  .listItem {
+  .linkList {
     display: none;
-  }
-  .container-item {
-    row-gap: 0;
-  }
-  .footer {
-    margin: 0 25px;
   }
 }

@@ -9,17 +9,17 @@ import Image from "next/image";
 import { useMediaQuery } from "react-responsive";
 import { ArrowRight } from "lucide-react";
 
-import classes from "./index.module.css";
+import styles from "./index.module.css";
 
 export function CarouselDemo() {
   const isMobile = useMediaQuery({ query: "(max-width: 760px)" });
   return (
-    <div className={classes.container}>
+    <div className={styles.carouselContainer}>
       <Carousel>
         <CarouselContent>
           {Array.from({ length: 5 }).map((_, index) => (
             <CarouselItem key={index}>
-              <div className={classes.carousel}>
+              <div className={styles.carouselItem}>
                 <Image
                   src={
                     isMobile
@@ -35,9 +35,9 @@ export function CarouselDemo() {
                 />
 
                 {isMobile && (
-                  <div className={classes["carousel-title"]}>
-                    <h2>Chicky Run</h2>
-                    <div className={classes["carousel-details"]}>
+                  <div className={styles.carouselTitle}>
+                    <h2 style={{ fontSize: "24px" }}>Chicky Run</h2>
+                    <div className={styles.carouselDetails}>
                       <h2>Game Details</h2>
                       <ArrowRight size={"12px"} />
                     </div>
@@ -48,14 +48,14 @@ export function CarouselDemo() {
           ))}
         </CarouselContent>
       </Carousel>
-      <div className={classes["slide-action"]}>
-        <div className={classes["icon-carousel"]}></div>
-        <div className={classes["icon-carousel"]}></div>
-        <div className={classes["cricle-border"]}>
-          <div className={classes["cricle"]}></div>
+      <div className={styles.slideActions}>
+        <div className={styles.carouselIcon}></div>
+        <div className={styles.carouselIcon}></div>
+        <div className={styles.circleBorder}>
+          <div className={styles.circle}></div>
         </div>
-        <div className={classes["icon-carousel"]}></div>
-        <div className={classes["icon-carousel"]}></div>
+        <div className={styles.carouselIcon}></div>
+        <div className={styles.carouselIcon}></div>
       </div>
     </div>
   );
