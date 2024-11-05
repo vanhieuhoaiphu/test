@@ -175,12 +175,12 @@ export default function Session() {
           </div>
         </div>
       </div>
-      <div style={{ marginTop: "68px" }}>
+      <div style={{ marginTop: "68px", position: "relative" }}>
         <Image
           src={"/assets/illustrator.png"}
           alt="banner"
           width={"400"}
-          className={classes["custom-auto-margin"]}
+          className={`${classes["custom-auto-margin"]} ${classes["witch"]}`}
           height={0}
         />
 
