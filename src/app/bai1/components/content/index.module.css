@@ -58,6 +58,10 @@
     flex-direction: column;
     width: 100%;
   }
+  .horizontalItem {
+    padding: 0;
+    border: none;
+  }
 
   .navMenu {
     display: flex;
