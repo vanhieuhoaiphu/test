@@ -242,7 +242,7 @@ export default function Session() {
               "/assets/rectangle52.png",
             ].map((item, index) => (
               <CarouselItem key={index} className={styles.carouselItem}>
-                <Image src={item} alt="" />
+                <Image src={item} alt="" width={100} height={100}  />
               </CarouselItem>
             ))}
           </CarouselContent>
