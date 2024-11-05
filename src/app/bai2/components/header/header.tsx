@@ -26,7 +26,7 @@ export default function Header() {
           <White_logoIcon2 className={classes.logo} />
         </div>
 
-        <div className={`${classes.show}`}>
+        <div className={`${show && classes.show} ${classes["menu-list"]}`}>
           {MenuHeader?.map((item) => (
             <div key={item.text}>
               <div
