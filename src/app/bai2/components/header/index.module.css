@@ -73,6 +73,9 @@
 .icon-right {
   display: none;
 }
+.show {
+  display: none;
+}
 @media (max-width: 1400px) {
   .header-container {
     padding: 0 100px;
@@ -108,10 +111,16 @@
     border-bottom: 1px solid #eeeeee;
     align-items: center;
   }
+  .country {
+    display: block;
+    position: fixed;
+    border: none;
+    top: 10px;
+    left: 10px;
+  }
   .show {
     display: block;
     position: fixed;
-
     top: 0;
     left: 0;
     right: 0;

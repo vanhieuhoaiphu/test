@@ -1,4 +1,3 @@
-import { White_logoIcon } from "@/components/Icons/White_logoIcon";
 import classes from "./index.module.css";
 
 import { ArrowRight } from "lucide-react";
@@ -7,6 +6,7 @@ import { AntDesignFacebookFilledIcon } from "@/components/Icons/AntDesignFaceboo
 import { AntDesignLinkedinFilledIcon } from "@/components/Icons/AntDesignLinkedinFilledIcon";
 import { VuesaxBoldLocationIcon } from "@/components/Icons/VuesaxBoldLocationIcon";
 import { VuesaxBoldMobileIcon } from "@/components/Icons/VuesaxBoldMobileIcon";
+import { White_logoIcon2 } from "@/components/Icons/White_logoIcon2";
 
 const Footer = () => {
   return (
@@ -17,7 +17,7 @@ const Footer = () => {
           <div className={classes.container31}>
             <div className={classes["logo-container"]}>
               <div style={{ marginBottom: "15px" }}>
-                <White_logoIcon className={classes.icon14} />
+                <White_logoIcon2 className={classes.icon14} />
               </div>
 
               <div className={classes["icon-container"]}>

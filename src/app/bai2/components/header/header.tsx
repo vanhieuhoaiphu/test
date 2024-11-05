@@ -26,7 +26,7 @@ export default function Header() {
           <White_logoIcon2 className={classes.logo} />
         </div>
 
-        <div className={`${classes["menu-list"]} ${show && classes.show}`}>
+        <div className={`${classes.show}`}>
           {MenuHeader?.map((item) => (
             <div key={item.text}>
               <div
@@ -39,7 +39,7 @@ export default function Header() {
             </div>
           ))}
           <div>
-            <div className={classes["menu-item"]}>
+            <div className={`${classes["menu-item"]} ${classes.country}`}>
               <Popover>
                 <PopoverTrigger asChild>
                   <div>
@@ -88,7 +88,12 @@ export default function Header() {
               </Popover>
             </div>
           </div>
-          <X onClick={() => setShow(false)} className={classes["icon-close"]} />
+          {show && (
+            <X
+              onClick={() => setShow(false)}
+              className={classes["icon-close"]}
+            />
+          )}
         </div>
 
         <div className={classes["icon-right"]}>

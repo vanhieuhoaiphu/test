@@ -91,7 +91,7 @@
   flex: 1;
 
   grid-template-columns: 1fr 1fr;
-  row-gap: 10px;
+  gap: 20px;
 }
 .custom-transparent-box {
   height: 56px;
@@ -149,8 +149,11 @@
   justify-content: center;
   flex-direction: column;
 }
-
-@media (max-width: 768px) {
+.icon14 {
+  width: auto;
+  height: 90px;
+}
+@media (max-width: 1200px) {
   .icon11 {
     width: auto;
     height: 40px;

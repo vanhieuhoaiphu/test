@@ -208,11 +208,17 @@ export default function Session() {
         )}
       </div>
 
-      <div className={classes["custom-full-width "]}>
+      <div
+        className={classes["custom-full-width "]}
+        style={{ background: "#F6F6F6" }}
+      >
         <div>
           <p
             className={classes["about-us"]}
-            style={{ textAlign: "center", marginTop: "128px" }}
+            style={{
+              textAlign: "center",
+              marginTop: "128px",
+            }}
           >
             Our Partners
           </p>

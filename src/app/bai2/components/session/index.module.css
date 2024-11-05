@@ -110,7 +110,6 @@
   left: 500px;
   top: 300px;
   z-index: 999;
-  width: 50px;
   animation: fly 6s ease-in-out infinite;
 }
 .custom-font-style {
@@ -121,7 +120,11 @@
   .ourgame {
     grid-template-columns: repeat(3, 1fr);
   }
+  .about {
+    margin: 0 50px;
+  }
 }
+
 @media (max-width: 768px) {
   .about-us {
     font-size: 40px;
