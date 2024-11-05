@@ -1,4 +1,4 @@
-.container {
+.navbarContainer {
   display: flex;
   column-gap: 20px;
   margin: 0 auto;
@@ -6,12 +6,13 @@
   width: 100vw;
   padding: 0 340px;
 }
-.horizontal {
+
+.horizontalItem {
   border-bottom: 1px solid black;
   padding-bottom: 20px;
 }
 
-.action {
+.navItem {
   display: flex;
   column-gap: 5px;
   margin-top: 25px;
@@ -19,39 +20,54 @@
   font-weight: 600;
   opacity: 0.2;
 }
-.action svg {
+
+.navItem svg {
   width: 20px;
   height: auto;
   object-fit: cover;
 }
 
-.active {
+.activeItem {
   opacity: 1;
 }
-.menu {
+
+.navMenu {
   width: 270px;
 }
+
 .grid {
   grid-template-columns: 1fr 1fr;
 }
-.title-session {
+
+.titleSession {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 @media (max-width: 1400px) {
-  .container {
+  .navbarContainer {
     padding: 0 100px;
   }
+
+  .horizontalItem {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
 }
+
 @media (max-width: 1200px) {
-  .container {
+  .navbarContainer {
     padding: 0 100px;
     margin-top: 10px;
     flex-direction: column;
     width: 100%;
   }
-  .menu {
+  .horizontalItem {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  .navMenu {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -59,20 +75,25 @@
     cursor: pointer;
   }
 }
+
 @media (max-width: 768px) {
-  .horizontal {
+  .horizontalItem {
     border-left: 1px solid black;
     padding-bottom: 20px;
   }
+
   .hovi {
     display: none;
   }
-  .container {
+
+  .navbarContainer {
     flex-direction: column;
     width: 100%;
     margin-top: 0;
+    padding: 0;
   }
-  .action {
+
+  .navItem {
     flex-direction: column;
     width: 100%;
     margin-top: 0;
@@ -81,13 +102,15 @@
     align-items: center;
     border-bottom: 1px solid #000000a1;
   }
-  .menu {
+
+  .navMenu {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     cursor: pointer;
   }
+
   .cardHotGame {
     margin-top: 30px;
     width: 100%;
@@ -96,18 +119,22 @@
     padding-bottom: 20px;
     border-radius: 20px;
   }
+
   .cardHotGame img {
     border-radius: 0;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
   }
-  .info-card {
+
+  .infoCard {
     margin: 0 20px;
   }
+
   .grid {
     grid-template-columns: 1fr;
   }
-  .title-session {
+
+  .titleSession {
     margin-top: 20px;
   }
 }
