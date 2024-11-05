@@ -12,6 +12,7 @@ import { VuesaxBoldPeopleIcon } from "@/components/Icons/VuesaxBoldPeopleIcon";
 import { VuesaxBoldPenTool2Icon } from "@/components/Icons/VuesaxBoldPenTool2Icon";
 import { VuesaxBoldCalendarTickIcon } from "@/components/Icons/VuesaxBoldCalendarTickIcon";
 import { MapIcon } from "@/components/Icons/MapIcon";
+
 const Card = [
   {
     title: "E-Space",
@@ -90,8 +91,8 @@ const Card = [
 export default function Session() {
   const isMobile = useMediaQuery({ query: "(max-width: 760px)" });
 
-  const renderItem = (list: any) =>
-    list?.map((item: any) => (
+  const renderItem = (list: typeof Card) =>
+    list?.map((item) => (
       <div
         key={item.title}
         className={classes["grid-item"]}
