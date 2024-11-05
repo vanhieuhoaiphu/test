@@ -58,7 +58,7 @@
     flex-direction: column;
     width: 100%;
   }
-  
+
   .navMenu {
     display: flex;
     justify-content: space-between;
@@ -82,6 +82,7 @@
     flex-direction: column;
     width: 100%;
     margin-top: 0;
+    padding: 0;
   }
 
   .navItem {

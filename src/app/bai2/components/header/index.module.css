@@ -82,14 +82,6 @@
   display: none;
 }
 
-.languageSelector {
-  display: block;
-  position: fixed;
-  border: none;
-  top: 10px;
-  left: 10px;
-}
-
 .show {
   display: none;
 }
@@ -101,6 +93,14 @@
 }
 
 @media (max-width: 768px) {
+  .languageSelector {
+    display: block;
+    position: fixed;
+    border: none;
+    top: 10px;
+    left: 10px;
+  }
+
   .headerContainer {
     padding: 0 20px;
   }
@@ -135,7 +135,12 @@
     border-bottom: 1px solid #eeeeee;
     align-items: center;
   }
-
+  .languageSelector {
+    border: none;
+  }
+  .headerContainer {
+    margin: 0;
+  }
   .show {
     display: block;
     position: fixed;

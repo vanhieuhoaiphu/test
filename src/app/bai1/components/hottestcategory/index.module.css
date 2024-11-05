@@ -45,7 +45,23 @@
   justify-content: space-between;
   gap: 10px;
 }
-
+.cardOverride {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 15px;
+  overflow: hidden;
+}
+.cardOverride p:nth-of-type(1) {
+  font-size: 18px;
+}
+.cardOverride p:nth-of-type(2) {
+  font-size: 10px;
+  opacity: 0.6;
+}
+.cardOverride svg {
+  width: 24px;
+}
 .cardHeader {
   width: 100%;
   padding-top: 100%;
@@ -104,10 +120,12 @@
   border: 1px solid rgba(0, 0, 0, 0.02);
 }
 
-/* Media Queries */
 @media (max-width: 768px) {
   .container {
-    margin-top: 10px;
+    padding: 0 40px;
+  }
+  .container {
+    margin-top: 47px;
   }
   .categoryGrid {
     grid-template-columns: 1fr;

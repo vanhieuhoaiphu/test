@@ -41,30 +41,65 @@ export function CarouselDemo() {
         )}
 
         <h2
-          className={`${classes.bannerTitle} ${classes['font-white-center']}`}
-          style={{ fontFamily: playfair.style.fontStyle }}
+          className={`${classes.bannerTitle} ${classes["font-white-center"]}`}
+          style={{ fontFamily: playfair.style.fontFamily }}
         >
           We’re Getting Ready
         </h2>
 
         <div className={`${classes.time} ${classes.flexCenter}`}>
           <div>
-            <h2 className={classes.textTime} style={{ fontFamily: playfair.style.fontStyle }}>30</h2>
+            <h2
+              className={classes.textTime}
+              style={{ fontFamily: playfair.style.fontFamily }}
+            >
+              30
+            </h2>
             <h2 style={{ fontWeight: "600" }}>Days</h2>
           </div>
-          <div className={classes.textTime} style={{ fontFamily: playfair.style.fontStyle }}>:</div>
+          <div
+            className={classes.textTime}
+            style={{ fontFamily: playfair.style.fontFamily }}
+          >
+            :
+          </div>
           <div>
-            <h2 className={classes.textTime} style={{ fontFamily: playfair.style.fontStyle }}>18</h2>
+            <h2
+              className={classes.textTime}
+              style={{ fontFamily: playfair.style.fontFamily }}
+            >
+              18
+            </h2>
             <h2 style={{ fontWeight: "600" }}>Hours</h2>
           </div>
-          <div className={classes.textTime} style={{ fontFamily: playfair.style.fontStyle }}>:</div>
+          <div
+            className={classes.textTime}
+            style={{ fontFamily: playfair.style.fontFamily }}
+          >
+            :
+          </div>
           <div>
-            <h2 className={classes.textTime} style={{ fontFamily: playfair.style.fontStyle }}>20</h2>
+            <h2
+              className={classes.textTime}
+              style={{ fontFamily: playfair.style.fontFamily }}
+            >
+              20
+            </h2>
             <h2 style={{ fontWeight: "600" }}>Minutes</h2>
           </div>
-          <div className={classes.textTime} style={{ fontFamily: playfair.style.fontStyle }}>:</div>
+          <div
+            className={classes.textTime}
+            style={{ fontFamily: playfair.style.fontFamily }}
+          >
+            :
+          </div>
           <div>
-            <h2 className={classes.textTime} style={{ fontFamily: playfair.style.fontStyle }}>11</h2>
+            <h2
+              className={classes.textTime}
+              style={{ fontFamily: playfair.style.fontFamily }}
+            >
+              11
+            </h2>
             <h2 style={{ fontWeight: "600" }}>Seconds</h2>
           </div>
         </div>

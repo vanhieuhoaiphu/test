@@ -4,9 +4,35 @@ import { CarouselDemo } from "./components/banner/banner";
 import Footer from "./components/footer/footer";
 import Header from "./components/header/header";
 import Session from "./components/session/sessions";
-import { ArrowDown, ArrowUp } from "lucide-react";
+import { ChevronDown, ChevronUp } from "lucide-react";
 import { Montserrat } from "next/font/google";
-const mont = Montserrat({ subsets: ['latin'] }) 
+import { createPortal } from "react-dom";
+const mont = Montserrat({ subsets: ["latin"] });
+// Import your icon component
+
+const FloatingButton = ({ showIcon }: { showIcon: boolean }) => {
+  return createPortal(
+    <div
+      style={{
+        borderRadius: "50%",
+        width: "40px",
+        height: "40px",
+        position: "fixed",
+        top: "95vh",
+        right: "40px",
+        boxShadow: "0px 4px 10px 0px #0000004D",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        zIndex: 999999,
+      }}
+    >
+      {!showIcon ? <ChevronUp /> : <ChevronDown />}
+    </div>,
+    document.body
+  );
+};
+
 export default function Page() {
   const [showIcon, setShowIcon] = useState<boolean>(false);
   const [lastScrollY, setLastScrollY] = useState<number>(0);
@@ -29,26 +55,20 @@ export default function Page() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [lastScrollY]);
+
   return (
-    <div style={{fontFamily: mont.style.fontFamily}}>
+    <div
+      style={{
+        fontFamily: mont.style.fontFamily,
+        position: "absolute",
+        top: 0,
+        right: 0,
+        bottom: 0,
+        left: 0,
+      }}
+    >
       <div style={{ display: "none" }} ref={ref}></div>
-      <div
-        style={{
-          borderRadius: "50%",
-          width: "40px",
-          height: "40px",
-          position: "fixed",
-          top: "95vh",
-          right: "40px",
-          boxShadow: "0px 4px 10px 0px #0000004D",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          zIndex: 999,
-        }}
-      >
-        {!showIcon ? <ArrowUp /> : <ArrowDown />}
-      </div>
+      <FloatingButton showIcon={showIcon} />
       <Header />
       <CarouselDemo />
       <Session />

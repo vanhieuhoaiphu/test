@@ -19,7 +19,8 @@ const hottestCategories = [
     iconComponent: Music_icon87b8e70SvgIcon,
     title: "Music",
     backgroundColor: "#5C6EFF",
-    description: "Music makes everything better, and these games will groove to it!",
+    description:
+      "Music makes everything better, and these games will groove to it!",
     banner: "/assets/music_pic_enf1afa3Png.png",
     games: [
       { text: "1", icon: "/assets/app_icon_small3x1fcf1f40Png.png" },
@@ -62,8 +63,12 @@ export default function HottestCategory() {
               <SelectValue placeholder="Release Date" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="awst">Australian Western Standard Time (AWST)</SelectItem>
-              <SelectItem value="acst">Australian Central Standard Time (ACST)</SelectItem>
+              <SelectItem value="awst">
+                Australian Western Standard Time (AWST)
+              </SelectItem>
+              <SelectItem value="acst">
+                Australian Central Standard Time (ACST)
+              </SelectItem>
             </SelectContent>
           </Select>
         )}
@@ -76,9 +81,11 @@ export default function HottestCategory() {
                 className={styles.cardHeader}
                 style={{ background: category.backgroundColor }}
               >
-                <category.iconComponent />
-                <p>{category.title}</p>
-                <p>{category.description}</p>
+                <div className={styles.cardOverride}>
+                  <category.iconComponent />
+                  <p>{category.title}</p>
+                  <p>{category.description}</p>
+                </div>
               </div>
               <div className={styles.gameIcons}>
                 {category.games.slice(0, 2).map((game) => (

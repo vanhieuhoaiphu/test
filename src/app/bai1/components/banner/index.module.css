@@ -1,17 +1,17 @@
-.carouselItem { /* Renamed from .carousel */
+.carouselItem {
   position: relative;
   width: 100%;
   height: 100%;
 }
 
-.carouselContainer { /* Renamed from .container */
+.carouselContainer {
   position: relative;
-  padding: 0 260px; /* Retained original padding */
+  padding: 0 260px;
   width: 100vw;
   background: #03827e;
 }
 
-.carouselTitle { /* Renamed from .carousel-title */
+.carouselTitle {
   position: absolute;
   bottom: 0;
   padding-bottom: 29px;
@@ -27,7 +27,7 @@
   font-size: 24px;
 }
 
-.slideActions { /* Renamed from .slide-action */
+.slideActions {
   position: absolute;
   cursor: pointer;
   bottom: 0;
@@ -41,7 +41,7 @@
   align-items: center;
 }
 
-.carouselIcon { /* Renamed from .icon-carousel */
+.carouselIcon {
   width: 8px;
   height: 8px;
   opacity: 0.5;
@@ -49,7 +49,7 @@
   border-radius: 50%;
 }
 
-.carouselDetails { /* Renamed from .carousel-details */
+.carouselDetails {
   margin-top: 21px;
   display: flex;
   column-gap: 5px;
@@ -61,17 +61,17 @@
   font-size: 13px;
 }
 
-.detailsText { /* Renamed from .details-text */
+.detailsText {
   text-align: center;
   font-size: 14px;
 }
 
-.circleBorder { /* Renamed from .cricle-border */
+.circleBorder {
   border-radius: 50%;
   border: 1px solid white;
 }
 
-.circle { /* Renamed from .cricle */
+.circle {
   width: 10px;
   height: 10px;
   margin: 4px;
@@ -79,15 +79,14 @@
   border-radius: 50%;
 }
 
-/* Media Queries */
 @media (max-width: 1400px) {
   .carouselContainer {
-    padding: 0 100px; /* Retained original padding for smaller screens */
+    padding: 0 100px;
   }
 }
 
 @media (min-width: 768px) {
-  .carouselItem { /* Renamed from .carousel */
+  .carouselItem {
     mask-image: linear-gradient(
       90deg,
       rgba(0, 0, 0, 0) 0%,
@@ -100,15 +99,15 @@
 }
 
 @media (max-width: 768px) {
-  .carouselItem { /* Renamed from .carousel */
+  .carouselItem {
     height: 420px;
     width: 100vw;
     position: relative;
   }
-  .slideActions { /* Renamed from .slide-action */
+  .slideActions {
     position: absolute;
     bottom: 0;
-    padding-bottom: 111px;
+    padding-bottom: 130px;
     left: 0;
     right: 0;
     z-index: 9;
@@ -117,10 +116,10 @@
     align-items: center;
     justify-content: center;
   }
-  .carouselContainer { /* Renamed from .container */
+  .carouselContainer {
     padding: 0;
   }
-  .gridContainer { /* If this is needed, make sure to update its name in the JSX as well */
+  .gridContainer {
     grid-template-columns: repeat(2, 1fr);
   }
 }

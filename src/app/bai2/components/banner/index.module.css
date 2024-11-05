@@ -1,4 +1,3 @@
-/* Utility classes for common styles */
 .flex-center {
   display: flex;
   align-items: center;
@@ -39,7 +38,8 @@
   font-weight: 900;
 }
 
-.bannerTitle, .title {
+.bannerTitle,
+.title {
   color: white;
   text-align: center;
 }
@@ -66,7 +66,6 @@
   max-width: 560px;
 }
 
-/* Custom Input Box */
 .customBox {
   height: 56px;
   margin-top: 32px;
@@ -85,20 +84,31 @@
   border: none;
 }
 
-/* Positioned Image */
 .fixedPosition {
   position: absolute;
   bottom: 20px;
-  height: 938px;
+  height: auto;
   width: 938px;
   left: -80px;
   z-index: 999;
 }
 
-/* Media Queries */
+@media (max-width: 1400px) {
+  .fixedPosition {
+    width: 700px;
+    bottom: -150px;
+  }
+  .title {
+    max-width: 90%;
+  }
+}
+
 @media (max-width: 768px) {
   .bannerTitle {
     font-size: 40px;
+  }
+  .title {
+    max-width: 90%;
   }
 
   .fixedPosition {
@@ -110,7 +120,7 @@
   }
 
   .time {
-    width: 300px;
+    width: 90%;
     padding: 24px;
     font-size: 20px;
   }
@@ -121,9 +131,11 @@
 
   .textTime {
     font-size: 36px;
+    font-weight: 900;
   }
 
   .textTime + h2 {
-    font-size: 10px;
+    font-size: 12px;
+    font-weight: 700;
   }
 }
