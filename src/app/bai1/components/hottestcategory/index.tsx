@@ -1,13 +1,5 @@
 import { useMediaQuery } from "react-responsive";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
 import styles from "./index.module.css"; // Updated to `styles` for clarity
 import { Music_icon87b8e70SvgIcon } from "@/components/Icons/Music_icon87b8e70SvgIcon copy";
@@ -52,26 +44,6 @@ export default function HottestCategory() {
     <div className={styles.container}>
       <div className={styles.header}>
         <p className={styles.title}>Hottest Category</p>
-        {!isMobile ? (
-          <div className={styles.navigation}>
-            <ChevronLeft />
-            <ChevronRight />
-          </div>
-        ) : (
-          <Select>
-            <SelectTrigger style={{ width: "120px" }}>
-              <SelectValue placeholder="Release Date" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="awst">
-                Australian Western Standard Time (AWST)
-              </SelectItem>
-              <SelectItem value="acst">
-                Australian Central Standard Time (ACST)
-              </SelectItem>
-            </SelectContent>
-          </Select>
-        )}
       </div>
       <div className={styles.categoryGrid}>
         {hottestCategories.slice(0, isMobile ? 1 : 2).map((category) => (
